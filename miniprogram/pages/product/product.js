@@ -15,7 +15,7 @@ Page({
 
     if (!product) {
       wx.showToast({
-        title: '商品已下架',
+        title: 'Product unavailable',
         icon: 'none'
       });
       this.setData({ product: null });
@@ -58,7 +58,7 @@ Page({
 
     cart.addToCart(product, quantity);
     wx.showToast({
-      title: '已加入购物车',
+      title: 'Added to cart',
       icon: 'success'
     });
   },
@@ -93,7 +93,7 @@ Page({
     }
 
     return {
-      title: `${product.name}｜${product.unit}`,
+      title: `${product.name} | ${product.unit}`,
       path: `/pages/product/product?id=${product.id}`,
       imageUrl: product.cover
     };

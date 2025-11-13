@@ -1,132 +1,135 @@
 const categories = [
   {
-    id: 'fresh',
-    name: '有机生鲜',
+    id: 'apparel',
+    name: 'Statement Apparel',
     banner:
-      'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=800&q=80',
-    slogan: '每日冷链直达，健康生活触手可及',
-    description: '严选原产地上乘食材，坚持无激素、零农残，只为你的每日餐桌。'
+      'https://images.unsplash.com/photo-1602810318383-e386cc2a3d3b?auto=format&fit=crop&w=800&q=80',
+    slogan: 'Limited runs crafted for supporters around the globe',
+    description:
+      'Premium fabrics and bold graphics that celebrate what you stand for. Ethically produced with worldwide fulfillment.'
   },
   {
-    id: 'snacks',
-    name: '轻食零嘴',
+    id: 'accessories',
+    name: 'Collectible Accessories',
     banner:
-      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
-    slogan: '低糖高纤，满足味蕾的同时更关心你的身材',
-    description: '精选全球口碑小食，健康与美味兼得，让休闲时光无负担。'
+      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+    slogan: 'Carry your message everywhere you go',
+    description:
+      'Pins, totes, and everyday gear designed for durability. Perfect for rallies, meetups, or gifting to fellow supporters.'
   },
   {
-    id: 'beauty',
-    name: '身心呵护',
+    id: 'home',
+    name: 'Home & Living',
     banner:
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
-    slogan: '天然香氛伴你放松一刻',
-    description: '植物精粹护肤、芳疗香氛，与你一起打造温柔生活感。'
+      'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80',
+    slogan: 'Create a space that reflects your voice',
+    description:
+      'From desk accents to morning essentials, refresh your home with pieces that spark conversation and pride.'
   }
 ];
 
 const products = [
   {
-    id: 'fresh-01',
-    name: '海南甜心小台农芒果',
+    id: 'apparel-01',
+    name: 'Liberty Crest Premium Hoodie',
     cover:
-      'https://images.unsplash.com/photo-1615485290382-455d4d0cd36d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
     slider: [
-      'https://images.unsplash.com/photo-1592928302989-724003b05317?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80'
     ],
-    price: 59.9,
-    unit: '5斤装',
-    stock: 24,
-    tags: ['零农残检测', '当季鲜采'],
-    categoryId: 'fresh',
+    price: 68,
+    unit: 'Sizes S-XXL · Brushed organic cotton',
+    stock: 35,
+    tags: ['Organic cotton', 'Limited edition'],
+    categoryId: 'apparel',
     description:
-      '精选海南当季熟成芒果，甜度高、纤维少。全程冷链配送，保证到手鲜嫩多汁。'
+      'A heavyweight hoodie featuring the Liberty Crest emblem in puff print. Soft on the inside, resilient on the outside, and ready for everyday wear in any climate.'
   },
   {
-    id: 'fresh-02',
-    name: '智利空运车厘子',
+    id: 'apparel-02',
+    name: 'Unity Flag Baseball Cap',
     cover:
-      'https://images.unsplash.com/photo-1464962634408-5970d4d148e1?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1516822003754-cca485356ecb?auto=format&fit=crop&w=800&q=80',
     slider: [
-      'https://images.unsplash.com/photo-1472476443506-ead00489e341?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1570197788417-0e8239cfdc31?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1542293787938-4d2226c42c35?auto=format&fit=crop&w=1200&q=80'
     ],
-    price: 138,
-    unit: 'JJ 2斤装',
-    stock: 12,
-    tags: ['原装空运', '脆甜爆汁'],
-    categoryId: 'fresh',
-    description:
-      '甄选智利 JJ 级别车厘子，原装空运，果径大、甜度高，适合分享的聚会甜品。'
-  },
-  {
-    id: 'snacks-01',
-    name: '伊比利亚火腿芝士脆片',
-    cover:
-      'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80',
-    slider: [
-      'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80'
-    ],
-    price: 32.5,
-    unit: '90g / 袋',
+    price: 32,
+    unit: 'Adjustable strapback · Embroidered',
     stock: 58,
-    tags: ['高蛋白', '无麸质'],
-    categoryId: 'snacks',
+    tags: ['Worldwide favorite', 'Embroidered'],
+    categoryId: 'apparel',
     description:
-      '进口芝士与火腿烘烤制成的轻盈脆片，高蛋白低碳水，随时补充能量。'
+      'A structured six-panel cap with a curved brim and raised embroidery. Breathable twill keeps it cool, while the adjustable strap delivers a secure fit for all-day rallies.'
   },
   {
-    id: 'snacks-02',
-    name: '新西兰酸奶燕麦杯',
+    id: 'accessories-01',
+    name: 'World Tour Enamel Pin Set',
     cover:
-      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?auto=format&fit=crop&w=800&q=80',
     slider: [
-      'https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1518544889280-0fbb832863e4?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80'
     ],
-    price: 18.9,
-    unit: '200g / 杯',
-    stock: 66,
-    tags: ['高纤维', '益生菌'],
-    categoryId: 'snacks',
+    price: 24,
+    unit: 'Set of 3 · Hard enamel & brass',
+    stock: 120,
+    tags: ['Collector set', 'Gift ready'],
+    categoryId: 'accessories',
     description:
-      '选用草饲奶源发酵，加入多种坚果与干果，口感层次丰富。冷藏即食，适合早餐或下午茶。'
+      'Three pins celebrating unity across continents. Each pin uses polished brass, double-post backs, and UV coating to keep colors bright wherever your travels take you.'
   },
   {
-    id: 'beauty-01',
-    name: '薰衣草舒缓香薰蜡烛',
+    id: 'accessories-02',
+    name: 'Global Voice Canvas Tote',
     cover:
-      'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80',
     slider: [
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80'
     ],
-    price: 129,
-    unit: '200g / 约45小时',
-    stock: 20,
-    tags: ['大豆蜡', '纯植物精油'],
-    categoryId: 'beauty',
+    price: 28,
+    unit: '16 oz cotton canvas · Inner pocket',
+    stock: 75,
+    tags: ['Everyday carry', 'Sustainable'],
+    categoryId: 'accessories',
     description:
-      '源自普罗旺斯的薰衣草精油，搭配大豆蜡低温熔点，燃烧时释放柔和香气，舒缓压力。'
+      'A reinforced canvas tote with screen-printed artwork on both sides. Features an internal zip pocket and boxed corners to keep tech, literature, and essentials organized.'
   },
   {
-    id: 'beauty-02',
-    name: '有机洋甘菊沐浴露',
+    id: 'home-01',
+    name: 'Morning Briefing Ceramic Mug',
     cover:
-      'https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80',
     slider: [
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1462917882517-e150004895fa?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=1200&q=80'
     ],
-    price: 86,
-    unit: '400ml',
-    stock: 48,
-    tags: ['EWG 绿色', '敏感肌友好'],
-    categoryId: 'beauty',
+    price: 19,
+    unit: '350 ml · Dishwasher safe',
+    stock: 90,
+    tags: ['Dishwasher safe', 'Microwave safe'],
+    categoryId: 'home',
     description:
-      '使用有机洋甘菊与芦荟萃取，温和清洁的同时为肌肤补水舒缓，沐浴后留有淡淡草本香。'
+      'Double-walled ceramic keeps drinks warm during early strategy sessions. The contrast handle and inside glaze add a modern look to desks, studios, or kitchen counters.'
+  },
+  {
+    id: 'home-02',
+    name: 'Campaign Trail Throw Blanket',
+    cover:
+      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80',
+    slider: [
+      'https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80'
+    ],
+    price: 84,
+    unit: '140 × 180 cm · Recycled fibers',
+    stock: 42,
+    tags: ['Recycled yarn', 'Travel ready'],
+    categoryId: 'home',
+    description:
+      'A jacquard woven throw produced with recycled yarns. Lightweight enough to pack, generous enough to wrap around two supporters on a cool evening event.'
   }
 ];
 

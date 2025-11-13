@@ -3,7 +3,7 @@
     <input
       class="search-input"
       type="text"
-      placeholder="搜索商品或标签，例如：空运 / 有机"
+      placeholder="Search products or tags, e.g. travel / organic"
       bindinput="onSearchChange"
     />
     <scroll-view class="category-scroll" scroll-x="true">
@@ -13,7 +13,7 @@
           bindtap="onCategoryTap"
           data-id=""
         >
-          全部
+          All
         </view>
         <block wx:for="{{categories}}" wx:key="id">
           <view
@@ -31,7 +31,7 @@
   <view class="product-grid">
     <block wx:if="{{filteredProducts.length === 0}}">
       <view class="card" style="text-align: center; padding: 80rpx 40rpx; color: #64748b;">
-        没有找到匹配的商品，试试换个关键词~
+        No products match your search. Try another keyword.
       </view>
     </block>
     <block wx:for="{{filteredProducts}}" wx:key="id">
@@ -46,8 +46,8 @@
             </block>
           </view>
           <view class="flex-between" style="margin-top: 24rpx;">
-            <view class="price">￥{{item.price}}</view>
-            <view class="secondary-button" style="padding: 12rpx 24rpx;">查看详情</view>
+            <view class="price">${{item.price}}</view>
+            <view class="secondary-button" style="padding: 12rpx 24rpx;">View details</view>
           </view>
         </view>
       </view>

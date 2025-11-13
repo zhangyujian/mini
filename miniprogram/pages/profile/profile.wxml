@@ -8,7 +8,7 @@
           <view class="badge" style="margin-top: 12rpx;">{{user.level}}</view>
         </view>
       </view>
-      <button class="secondary-button" bindtap="contactService">联系客服</button>
+      <button class="secondary-button" bindtap="contactService">Contact concierge</button>
     </view>
     <view style="margin-top: 32rpx; display: flex; gap: 16rpx; flex-wrap: wrap;">
       <block wx:for="{{user.benefits}}" wx:key="*this">
@@ -17,7 +17,7 @@
     </view>
   </view>
 
-  <view class="section-title">常用功能</view>
+  <view class="section-title">Quick actions</view>
   <view class="card shortcut-list">
     <block wx:for="{{shortcuts}}" wx:key="id">
       <view class="shortcut-item" bindtap="onShortcutTap" data-id="{{item.id}}">
@@ -30,7 +30,7 @@
     </block>
   </view>
 
-  <view class="section-title">服务指南</view>
+  <view class="section-title">Support guides</view>
   <view class="card">
     <block wx:for="{{guides}}" wx:key="title">
       <view style="margin-bottom: 32rpx;">

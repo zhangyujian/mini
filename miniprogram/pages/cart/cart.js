@@ -47,8 +47,8 @@ Page({
   removeItem(event) {
     const { id } = event.currentTarget.dataset;
     wx.showModal({
-      title: '提示',
-      content: '确定移除该商品吗？',
+      title: 'Remove item',
+      content: 'Are you sure you want to remove this product from your cart?',
       success: (res) => {
         if (res.confirm) {
           cart.removeItem(id);
@@ -60,8 +60,8 @@ Page({
 
   clearCart() {
     wx.showModal({
-      title: '清空购物车',
-      content: '确定要清空所有商品吗？',
+      title: 'Clear cart',
+      content: 'This will remove all items from your cart. Continue?',
       success: (res) => {
         if (res.confirm) {
           cart.clearCart();
@@ -80,21 +80,21 @@ Page({
   checkout() {
     if (this.data.items.length === 0) {
       wx.showToast({
-        title: '购物车为空',
+        title: 'Cart is empty',
         icon: 'none'
       });
       return;
     }
 
     wx.showModal({
-      title: '提交订单',
-      content: `共 ${this.data.totalQuantity} 件商品，总计 ￥${this.data.totalAmount}\n确认提交吗？`,
+      title: 'Place order',
+      content: `You are ordering ${this.data.totalQuantity} item(s) for $${this.data.totalAmount}. Continue to checkout?`,
       success: (res) => {
         if (res.confirm) {
           cart.clearCart();
           this.refreshCart();
           wx.showToast({
-            title: '下单成功',
+            title: 'Order placed',
             icon: 'success'
           });
         }
