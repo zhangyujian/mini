@@ -1,0 +1,126 @@
+.product-page {
+  padding-bottom: 140rpx;
+}
+
+.product-swiper {
+  height: 520rpx;
+}
+
+.product-image {
+  width: 100%;
+  height: 520rpx;
+}
+
+.swiper-indicator {
+  position: relative;
+  margin-top: -64rpx;
+  text-align: right;
+  padding: 0 48rpx 0 0;
+  color: #e2e8f0;
+  font-size: 28rpx;
+}
+
+.product-info {
+  margin: 24rpx;
+}
+
+.product-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #111827;
+}
+
+.product-unit {
+  color: #64748b;
+  margin-top: 12rpx;
+  font-size: 26rpx;
+}
+
+.product-desc {
+  margin-top: 24rpx;
+  line-height: 1.8;
+  color: #475569;
+  font-size: 28rpx;
+}
+
+.quantity-card {
+  margin: 24rpx;
+}
+
+.quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.counter {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #0f172a;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 36rpx;
+  width: 80rpx;
+  text-align: center;
+}
+
+.recommend-scroll {
+  padding: 0 24rpx 24rpx 24rpx;
+}
+
+.recommend-list {
+  display: inline-flex;
+  gap: 24rpx;
+}
+
+.recommend-card {
+  width: 260rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 20rpx rgba(15, 23, 42, 0.08);
+}
+
+.recommend-card image {
+  width: 100%;
+  height: 200rpx;
+  object-fit: cover;
+}
+
+.recommend-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #111827;
+  padding: 16rpx;
+}
+
+.action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(15, 23, 42, 0.08);
+  gap: 24rpx;
+}
+
+.action-bar .primary-button,
+.action-bar .secondary-button {
+  flex: 1;
+  padding: 24rpx 0;
+}
+
+.empty-state {
+  padding: 24rpx;
+}

@@ -1,0 +1,42 @@
+.profile-page {
+  padding-bottom: 80rpx;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.shortcut-list {
+  padding: 8rpx 0;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 8rpx;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.shortcut-item:last-child {
+  border-bottom: none;
+}
+
+.shortcut-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #111827;
+}
+
+.shortcut-desc {
+  font-size: 26rpx;
+  color: #64748b;
+  margin-top: 8rpx;
+}
+
+.shortcut-arrow {
+  font-size: 48rpx;
+  color: #cbd5f5;
+}

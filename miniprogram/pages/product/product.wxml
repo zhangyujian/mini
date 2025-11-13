@@ -1,0 +1,67 @@
+<view wx:if="{{product}}" class="product-page">
+  <swiper class="product-swiper" autoplay="{{true}}" circular="true" interval="5000" bindchange="onSliderChange">
+    <block wx:for="{{product.slider}}" wx:key="*this">
+      <swiper-item>
+        <image
+          src="{{item}}"
+          class="product-image"
+          mode="aspectFill"
+          bindtap="previewImage"
+          data-index="{{index}}"
+        ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="swiper-indicator">
+    {{sliderIndex + 1}} / {{product.slider.length}}
+  </view>
+
+  <view class="card product-info">
+    <view class="flex-between">
+      <view class="product-name">{{product.name}}</view>
+      <view class="price">￥{{product.price}}</view>
+    </view>
+    <view class="product-unit">规格：{{product.unit}} · 库存 {{product.stock}} 件</view>
+    <view class="tag-list">
+      <block wx:for="{{product.tags}}" wx:key="*this">
+        <view class="tag">{{item}}</view>
+      </block>
+    </view>
+    <view class="product-desc">{{product.description}}</view>
+  </view>
+
+  <view class="card quantity-card">
+    <view class="section-title" style="margin-top: 0;">选购数量</view>
+    <view class="quantity-selector">
+      <button class="counter" bindtap="decreaseQuantity">-</button>
+      <text class="quantity">{{quantity}}</text>
+      <button class="counter" bindtap="increaseQuantity">+</button>
+    </view>
+  </view>
+
+  <block wx:if="{{recommendedProducts.length > 0}}">
+    <view class="section-title" style="padding: 0 24rpx;">同类精选</view>
+    <scroll-view class="recommend-scroll" scroll-x="true">
+      <view class="recommend-list">
+        <block wx:for="{{recommendedProducts}}" wx:key="id">
+          <view class="recommend-card" data-id="{{item.id}}" bindtap="goToProduct">
+            <image src="{{item.cover}}" mode="aspectFill"></image>
+            <view class="recommend-name">{{item.name}}</view>
+            <view class="price">￥{{item.price}}</view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </block>
+
+  <view class="action-bar">
+    <button class="secondary-button" bindtap="addToCart">加入购物车</button>
+    <button class="primary-button" bindtap="buyNow">立即购买</button>
+  </view>
+</view>
+
+<view wx:else class="empty-state">
+  <view class="card" style="padding: 80rpx 40rpx; text-align: center; color: #64748b;">
+    商品已下架或不存在
+  </view>
+</view>
