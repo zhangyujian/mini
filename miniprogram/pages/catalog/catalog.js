@@ -1,15 +1,18 @@
 const app = getApp();
 
 function filterProducts(products, categoryId, keyword) {
+  const normalizedKeyword = (keyword || '').toLowerCase();
+
   return products
-    .filter((product) =>
-      categoryId ? product.categoryId === categoryId : true
-    )
-    .filter((product) =>
-      keyword
-        ? product.name.includes(keyword) || product.tags.some((tag) => tag.includes(keyword))
-        : true
-    );
+    .filter((product) => (categoryId ? product.categoryId === categoryId : true))
+    .filter((product) => {
+      if (!normalizedKeyword) {
+        return true;
+      }
+      const name = product.name.toLowerCase();
+      const tags = product.tags.map((tag) => tag.toLowerCase());
+      return name.includes(normalizedKeyword) || tags.some((tag) => tag.includes(normalizedKeyword));
+    });
 }
 
 Page({
@@ -37,11 +40,7 @@ Page({
     const { products } = app.globalData;
     this.setData({
       products,
-      filteredProducts: filterProducts(
-        products,
-        this.data.activeCategory,
-        this.data.searchKeyword
-      )
+      filteredProducts: filterProducts(products, this.data.activeCategory, this.data.searchKeyword)
     });
   },
 

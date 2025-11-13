@@ -1,37 +1,37 @@
 Page({
   data: {
     user: {
-      name: 'Hi, Mini 会员',
+      name: 'Hi, Global Member',
       avatar:
         'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=240&q=80',
-      level: '黑金会员',
-      benefits: ['每月专属礼包', '贵宾客服', '生日礼遇']
+      level: 'Ambassador Tier',
+      benefits: ['Early access drops', 'Priority customs support', 'Birthday exclusives']
     },
     shortcuts: [
       {
         id: 'orders',
-        title: '我的订单',
-        description: '查看全部订单记录'
+        title: 'Order history',
+        description: 'Track shipments and download invoices'
       },
       {
         id: 'coupons',
-        title: '优惠券',
-        description: '3 张待使用优惠券'
+        title: 'Rewards & coupons',
+        description: '2 rewards ready to redeem'
       },
       {
         id: 'address',
-        title: '收货地址',
-        description: '管理默认地址'
+        title: 'Shipping addresses',
+        description: 'Manage global delivery locations'
       }
     ],
     guides: [
       {
-        title: '如何获得积分？',
-        content: '完成订单、参与签到活动即可获得积分，可用于抵扣现金。'
+        title: 'How do I earn rewards?',
+        content: 'Complete purchases, refer friends, and share campaign links to collect reward points redeemable at checkout.'
       },
       {
-        title: '售后服务流程',
-        content: '7 天无理由退换，申请售后后专属客服将在 2 小时内联系你。'
+        title: 'International returns policy',
+        content: 'You have 30 days from delivery to request a return. Our concierge team will arrange region-specific pickup labels.'
       }
     ]
   },
@@ -39,15 +39,15 @@ Page({
   onShortcutTap(event) {
     const { id } = event.currentTarget.dataset;
     wx.showToast({
-      title: `${id} 功能待上线`,
+      title: `${id} coming soon`,
       icon: 'none'
     });
   },
 
   contactService() {
     wx.showModal({
-      title: '联系客服',
-      content: '拨打 400-888-1234 或通过小程序客服入口与我们联系。'
+      title: 'Global concierge',
+      content: 'Email support@globalshop.example or reach us on WhatsApp +1-202-555-0199 for 24/7 assistance.'
     });
   }
 });

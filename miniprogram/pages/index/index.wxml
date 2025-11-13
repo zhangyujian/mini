@@ -7,12 +7,12 @@
       <view style="font-size: 44rpx; font-weight: 700; margin-bottom: 12rpx;">{{hero.title}}</view>
       <view style="font-size: 28rpx; line-height: 1.6; opacity: 0.92;">{{hero.subtitle}}</view>
       <view style="margin-top: 36rpx;">
-        <button class="primary-button" bindtap="goToCatalog" type="primary">立即选购</button>
+        <button class="primary-button" bindtap="goToCatalog" type="primary">Shop the Collection</button>
       </view>
     </view>
   </view>
 
-  <view class="section-title">精选权益</view>
+  <view class="section-title">Why supporters choose us</view>
   <view>
     <block wx:for="{{perks}}" wx:key="title">
       <view class="card flex-between">
@@ -20,12 +20,12 @@
           <view style="font-weight: 600; font-size: 32rpx; margin-bottom: 8rpx;">{{item.title}}</view>
           <view style="color: #475569; font-size: 26rpx; line-height: 1.6;">{{item.desc}}</view>
         </view>
-        <view class="badge">限时</view>
+        <view class="badge">Global</view>
       </view>
     </block>
   </view>
 
-  <view class="section-title">精品分类</view>
+  <view class="section-title">Shop by collection</view>
   <view style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 24rpx;">
     <block wx:for="{{categories}}" wx:key="id">
       <view class="card" bindtap="goToCategory" data-id="{{item.id}}" style="padding: 0; overflow: hidden;">
@@ -38,7 +38,7 @@
     </block>
   </view>
 
-  <view class="section-title">今日主打</view>
+  <view class="section-title">Spotlight products</view>
   <view>
     <block wx:for="{{featuredProducts}}" wx:key="id">
       <view class="card flex-column" bindtap="goToProduct" data-id="{{item.id}}" style="padding: 0; overflow: hidden;">
@@ -46,7 +46,7 @@
         <view style="padding: 24rpx; width: 100%;">
           <view class="flex-between">
             <view style="font-size: 32rpx; font-weight: 600; max-width: 400rpx;">{{item.name}}</view>
-            <view class="price">￥{{item.price}}</view>
+            <view class="price">${{item.price}}</view>
           </view>
           <view style="color: #64748b; font-size: 26rpx; margin-top: 12rpx;">{{item.unit}}</view>
         </view>

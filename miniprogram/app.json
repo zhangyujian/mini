@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "Mini 商城",
+    "navigationBarTitleText": "Global Shop",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#f5f6f7"
   },
@@ -20,19 +20,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "Home"
       },
       {
         "pagePath": "pages/catalog/catalog",
-        "text": "分类"
+        "text": "Catalog"
       },
       {
         "pagePath": "pages/cart/cart",
-        "text": "购物车"
+        "text": "Cart"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的"
+        "text": "Profile"
       }
     ]
   }

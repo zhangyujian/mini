@@ -5,37 +5,37 @@
         <image src="{{item.cover}}" class="item-cover" mode="aspectFill"></image>
         <view class="item-content">
           <view class="item-name">{{item.name}}</view>
-          <view class="item-unit">规格：{{item.unit}}</view>
+          <view class="item-unit">Details: {{item.unit}}</view>
           <view class="flex-between">
-            <view class="price">￥{{item.price}}</view>
+            <view class="price">${{item.price}}</view>
             <view class="quantity-controller">
               <button class="quantity-btn" bindtap="changeQuantity" data-id="{{item.id}}" data-step="-1">-</button>
               <text class="quantity">{{item.quantity}}</text>
               <button class="quantity-btn" bindtap="changeQuantity" data-id="{{item.id}}" data-step="1">+</button>
             </view>
           </view>
-          <view class="remove-btn" bindtap="removeItem" data-id="{{item.id}}">移除</view>
+          <view class="remove-btn" bindtap="removeItem" data-id="{{item.id}}">Remove</view>
         </view>
       </view>
     </block>
 
     <view class="card summary-card">
       <view class="flex-between">
-        <view>共 {{totalQuantity}} 件</view>
-        <view class="price">合计：￥{{totalAmount}}</view>
+        <view>Total items: {{totalQuantity}}</view>
+        <view class="price">Total: ${{totalAmount}}</view>
       </view>
     </view>
 
     <view class="action-buttons">
-      <button class="secondary-button" bindtap="goToCatalog">继续选购</button>
-      <button class="primary-button" bindtap="checkout">提交订单</button>
+      <button class="secondary-button" bindtap="goToCatalog">Keep shopping</button>
+      <button class="primary-button" bindtap="checkout">Place order</button>
     </view>
-    <button class="danger-button" bindtap="clearCart">清空购物车</button>
+    <button class="danger-button" bindtap="clearCart">Clear cart</button>
   </block>
 
   <view wx:else class="empty-cart card">
-    <view style="font-size: 36rpx; font-weight: 600; margin-bottom: 16rpx;">购物车还是空的</view>
-    <view style="color: #64748b; font-size: 26rpx; margin-bottom: 32rpx;">去看看有什么好物吧～</view>
-    <button class="primary-button" bindtap="goToCatalog">前往选购</button>
+    <view style="font-size: 36rpx; font-weight: 600; margin-bottom: 16rpx;">Your cart is empty</view>
+    <view style="color: #64748b; font-size: 26rpx; margin-bottom: 32rpx;">Explore the collections to find your next favorite piece.</view>
+    <button class="primary-button" bindtap="goToCatalog">Start browsing</button>
   </view>
 </view>
