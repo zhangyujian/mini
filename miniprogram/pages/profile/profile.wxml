@@ -1,0 +1,42 @@
+<view class="container profile-page">
+  <view class="card profile-card">
+    <view class="flex-between">
+      <view class="flex-row" style="gap: 24rpx;">
+        <image src="{{user.avatar}}" class="avatar" mode="aspectFill"></image>
+        <view>
+          <view style="font-size: 36rpx; font-weight: 700;">{{user.name}}</view>
+          <view class="badge" style="margin-top: 12rpx;">{{user.level}}</view>
+        </view>
+      </view>
+      <button class="secondary-button" bindtap="contactService">联系客服</button>
+    </view>
+    <view style="margin-top: 32rpx; display: flex; gap: 16rpx; flex-wrap: wrap;">
+      <block wx:for="{{user.benefits}}" wx:key="*this">
+        <view class="tag">{{item}}</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="section-title">常用功能</view>
+  <view class="card shortcut-list">
+    <block wx:for="{{shortcuts}}" wx:key="id">
+      <view class="shortcut-item" bindtap="onShortcutTap" data-id="{{item.id}}">
+        <view>
+          <view class="shortcut-title">{{item.title}}</view>
+          <view class="shortcut-desc">{{item.description}}</view>
+        </view>
+        <text class="shortcut-arrow">›</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="section-title">服务指南</view>
+  <view class="card">
+    <block wx:for="{{guides}}" wx:key="title">
+      <view style="margin-bottom: 32rpx;">
+        <view style="font-size: 30rpx; font-weight: 600; margin-bottom: 12rpx;">{{item.title}}</view>
+        <view style="color: #475569; font-size: 26rpx; line-height: 1.8;">{{item.content}}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "description": "Mini 商城小程序",
+  "appid": "",
+  "projectname": "mini-mall",
+  "miniprogramRoot": "miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram"
+}

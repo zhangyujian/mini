@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="card" style="padding: 0 0 24rpx 0;">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="搜索商品或标签，例如：空运 / 有机"
+      bindinput="onSearchChange"
+    />
+    <scroll-view class="category-scroll" scroll-x="true">
+      <view class="category-chips">
+        <view
+          class="category-chip {{activeCategory === '' ? 'active' : ''}}"
+          bindtap="onCategoryTap"
+          data-id=""
+        >
+          全部
+        </view>
+        <block wx:for="{{categories}}" wx:key="id">
+          <view
+            class="category-chip {{activeCategory === item.id ? 'active' : ''}}"
+            bindtap="onCategoryTap"
+            data-id="{{item.id}}"
+          >
+            {{item.name}}
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="product-grid">
+    <block wx:if="{{filteredProducts.length === 0}}">
+      <view class="card" style="text-align: center; padding: 80rpx 40rpx; color: #64748b;">
+        没有找到匹配的商品，试试换个关键词~
+      </view>
+    </block>
+    <block wx:for="{{filteredProducts}}" wx:key="id">
+      <view class="product-card" bindtap="goToProduct" data-id="{{item.id}}">
+        <image src="{{item.cover}}" class="product-cover" mode="aspectFill"></image>
+        <view class="product-body">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-meta">{{item.unit}}</view>
+          <view class="tag-list">
+            <block wx:for="{{item.tags}}" wx:key="*this">
+              <view class="tag">{{tag}}</view>
+            </block>
+          </view>
+          <view class="flex-between" style="margin-top: 24rpx;">
+            <view class="price">￥{{item.price}}</view>
+            <view class="secondary-button" style="padding: 12rpx 24rpx;">查看详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
